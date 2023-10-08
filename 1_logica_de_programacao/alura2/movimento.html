@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="1200" height="600"></canvas>
+    <script>
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'lightblue';
+        pincel.fillRect(0, 0, 1200, 600); 
+
+        function desenhaCirculo(x,y,raio){
+            pincel.fillStyle = 'darkred';
+            pincel.beginPath();
+            pincel.arc(x,y,raio,0,2*Math.PI);
+            pincel.fill();
+        }
+        function limpaTela(){
+            pincel.clearRect(0,0,1200,600);
+            pincel.fillStyle = 'lightblue';
+            pincel.fillRect(0, 0, 1200, 600); 
+        }
+
+        var x = 0;
+        function animaçao(){
+            limpaTela();
+            desenhaCirculo(x,300,50);
+            x++;
+        }
+        setInterval(animaçao, 5);
+        
+    </script>
+</body>
+</html>

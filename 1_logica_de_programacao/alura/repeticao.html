@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+</head>
+<body>
+    <h1>Repetição</h1>
+    
+    <script>
+        var oq = prompt("digite o que deseja repetir: ");
+        var vezes = parseInt(prompt("digite quantas vezes deseja repetir: "));
+        var linhas = parseInt(prompt("digite o numero de linhas em que deseja escrever: "));
+
+        for(var max = 0; max < linhas; max++){
+            for(var max2 = 0; max2 < vezes; max2++){
+                document.write(oq);
+            }
+            document.write("<br>");
+        }
+       
+    </script>
+</body>
+</html>

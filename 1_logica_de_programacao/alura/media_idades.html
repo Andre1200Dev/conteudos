@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Idades</title>
+</head>
+<body>
+    <h1>Media Idades</h1>
+    <script>
+        var family = parseInt(prompt("De quantas pessoas quer calcular a media das idades? "));
+        var numero = 1;
+        var total = 0;
+        while (numero <=family){ 
+            var idades = parseInt(prompt("Informe a idade do parente numero "+numero));
+            total = total+idades;
+            numero++;
+        }
+        document.write("A média de todas as idades é: " +total/family);
+    </script>
+</body>
+</html>

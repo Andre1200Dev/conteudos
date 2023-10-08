@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="1200" height="600"> </canvas>
+
+    <script>
+        var tela = document.querySelector('canvas'); //Tras o elemento canvas do html para o javascript 
+        var pincel = tela.getContext('2d'); //especifica em que contexto vamos trabalhar ex: 2d, 3d etc
+
+        pincel.fillStyle = 'lightblue';
+        pincel.fillRect(0, 0, 1200, 600);
+        
+        pincel.fillStyle = 'darkblue';
+        pincel.fillRect(0, 0, 400, 600);
+
+        pincel.fillStyle = 'darkgreen';
+        pincel.fillRect(800, 0, 400, 600);
+
+        pincel.fillStyle = 'darkred';
+        pincel.beginPath();
+        pincel.moveTo(600,300);
+        pincel.lineTo(400,600);
+        pincel.lineTo (800,600);
+        pincel.fill();
+        
+        pincel.fillStyle = 'darkgray';
+        pincel.beginPath();
+        pincel.arc(600,300,100,0,2*3.14);
+        pincel.fill();
+        
+
+    </script>
+</body>
+</html>

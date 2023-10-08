@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        alert("O computador pensou em um número entre 0 e 10");
+        alert("Você tera 3 chances para acertar");
+        
+        var chance = 3
+        var numeroPensado = Math.round(Math.random() * 10);
+        console.log(numeroPensado);
+
+        while(chance > 0){
+            var chute = parseInt(prompt("Chance "+ chance +" Chute um número: "));
+            if(chute == numeroPensado){
+                alert("Você acertou o numero pensado é :" + numeroPensado);
+                mostra("Você venceu o numero pensado era :" + numeroPensado);
+                chance = 0;
+                }
+                if(chute > numeroPensado){
+                alert("Errouuuuuu você chutou muito alto");
+                chance--;
+                }
+                if(chute < numeroPensado){
+                alert("Errouuuuuu você chutou muito baixo");
+                chance--;
+                }
+            }
+        if( chance == 0 && chute != numeroPensado){
+            mostra("Que pena você não conseguiu acertar, o número pensado era :" + numeroPensado);
+        }
+
+    </script>
+</body>
+</html>

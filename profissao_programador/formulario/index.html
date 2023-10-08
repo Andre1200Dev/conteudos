@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Formulario de Inscrição</title>
+    <link href="css.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="#">
+      <!--O elemento <form> é o elemento que formalmente define o formulário-->
+      <!--O elemento <label> é a maneira formal de definir um rótulo para um widget de formulário HTML.-->
+      <h1>Teste Formulario de Inscrição</h1>
+      <span id="info"
+        >Os campos marcados com <strong>*</strong> são de preenchimento
+        obrigatorio</span
+      >
+      <fieldset>
+        <legend class="form__legend">Dados pessoais</legend>
+        <div>
+          <label for="nome">Nome*</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome completo"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email*</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="coloque um email valido"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div>
+          <label for="password">Senha*</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="crie aqui a sua senha"
+            required
+          />
+        </div>
+        <div>
+          <label for="checkbox"
+            >Checkbox - Ao marcar você aceite os termos de uso</label
+          >
+          <input type="checkbox" id="checkbox" name="checkbox" />
+        </div>
+        <div class="sexo">
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="masculino" name="sexo" value="masculino" />
+
+          <label for="feminino">Feminino</label>
+          <input type="radio" id="feminino" name="sexo" value="feminino" />
+
+          <label for="outros">Outro</label>
+          <input type="radio" id="outros" name="sexo" value="outros" />
+        </div>
+        <div>
+          <label for="range">Range</label>
+          <input type="range" id="range" name="range" />
+        </div>
+        <div>
+          <label for="number">Número</label>
+          <input type="number" id="number" name="number" />
+        </div>
+        <div>
+          <label for="file">Arquivo</label>
+          <input type="file" id="file" name="file" />
+        </div>
+        <div>
+          <label for="date">Data</label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <div>
+          <select name="dia da semana">
+            <option value="Domingo">Domingo</option>
+            <option value="Segunda">Segunda</option>
+            <option value="Terça">Terça</option>
+            <option value="Quarta">Quarta</option>
+            <option value="Quinta">Quinta</option>
+            <option value="Sexta">Sexta</option>
+            <option value="Sábado">Sábado</option>
+          </select>
+        </div>
+        <div>
+          <textarea
+            name="menssagem"
+            id="menssagem"
+            rows="10"
+            placeholder="Deixe aqui uma sugestão"
+          ></textarea>
+        </div>
+        <input type="submit" value="Cadastrar" id="cadastrar" />
+      </fieldset>
+    </form>
+  </body>
+</html>

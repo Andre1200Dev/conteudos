@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <h1>Futebol</h1>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        
+        var vitorias = parseInt(prompt("Digite o número de vitorias: "));
+        var empates = parseInt(prompt("Digite seu número de empates: "));
+        var derrotas = parseInt(prompt("Digite o número de derrotas: "))
+
+        var pontos = (vitorias*3) + empates - derrotas;
+        mostra("O total de pontos é: "+ pontos);
+
+        if(pontos > 28){
+            mostra("Melhorou");
+        }
+        if(pontos < 28){
+            mostra("Piorou");
+        }
+        if(pontos == 28){
+            mostra("Sem Mudanças");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <script>
+        var tab  = parseInt(prompt("Digite 1 para adição, 2  para subtração, 3 para multiplicação ou 4 para divisão: "));
+        if(tab < 1 || tab > 4){
+            window.alert('[ERRO] Recarregue e informe um número válido');
+            
+        }else{
+            var numero = parseInt(prompt("Informe o numero do qual gostaria de ver a tabuada: "));
+            
+            var max = 10;
+
+            if(tab == 1){
+                for(var numb = 0;numb <= max ; numb++){
+                    document.write(numero +'+'+ numb +'='+ (numero+numb) + "<br>");
+                }
+            }
+            else if(tab == 2){
+                for(var numb = 0;numb <= max ; numb++){
+                    document.write(numero +'-'+ numb +'='+ (numero-numb) + "<br>");
+                }
+            }
+            else if(tab == 3){
+                for(var numb = 0;numb <= max ; numb++){
+                    document.write(numero +'x'+ numb +'='+ (numero*numb) + "<br>");
+                }
+            }
+            else if(tab == 4){
+                for(var numb = 0;numb <= max ; numb++){
+                    document.write(numero +'÷'+ numb +'='+ (numero/numb) + "<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
