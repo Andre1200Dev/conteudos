@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMC</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>IMC</h1>
     <script>
-        function pulaLinha(){
-            document.write("<br><br>");
-        }
-        function mostra(frase){
-            document.write(frase);
-            pulaLinha();
-        }
-        function calculaImc(peso, altura){
-            return Math.round(peso / (altura*altura));
-        }
+      function pulaLinha() {
+        document.write("<br><br>");
+      }
+      function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+      function calculaImc(peso, altura) {
+        return Math.round(peso / (altura * altura));
+      }
 
-        nome = prompt("Infome seu Nome: ");
-        alturaUser = prompt(nome + " ,infome sua altura: ");
-        pesoUser   = prompt(nome + " ,informe seu peso: ");
+      nome = prompt("Infome seu Nome: ");
+      alturaUser = prompt(nome + " ,infome sua altura: ");
+      pesoUser = prompt(nome + " ,informe seu peso: ");
 
-        imc = calculaImc(pesoUser, alturaUser)
-        mostra(nome + " o seu imc é: " + imc);
+      imc = calculaImc(pesoUser, alturaUser);
+      mostra(nome + " o seu imc é: " + imc);
 
-        if(imc < 18.5){
-            mostra("Você esta abaixo do seu peso ideal!")
-        }
-        if(imc >= 18.5 && imc <= 35){
-            mostra("Você esta no seu peso ideal!")
-        }
-        if(imc > 35){
-            mostra("Você esta acima do seu peso ideal!")
-        }
+      if (imc < 18.5) {
+        mostra("Você esta abaixo do seu peso ideal!");
+      }
+      if (imc >= 18.5 && imc <= 35) {
+        mostra("Você esta no seu peso ideal!");
+      }
+      if (imc > 35) {
+        mostra("Você esta acima do seu peso ideal!");
+      }
     </script>
-</body>
+  </body>
 </html>
